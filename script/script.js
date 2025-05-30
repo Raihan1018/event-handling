@@ -19,3 +19,14 @@ hoverDiv.addEventListener("mouseleave", () => {
   hoverDiv.style.backgroundColor = "lightblue";
   hoverDiv.innerText = "Hover me";
 });
+
+// keyboard event
+const inputField = document.getElementById("inputField");
+const keyMessage = document.getElementById("keyMessage");
+const keyRelease = document.getElementById("keyRelease");
+inputField.addEventListener("keydown", (event) => {
+  keyMessage.innerText = `${event.key}`;
+});
+inputField.addEventListener('keyup', ()=> {
+    keyRelease.innerText = 'you release a key'
+})
